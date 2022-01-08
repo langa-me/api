@@ -1,0 +1,29 @@
+openapi: 3.1.0
+info:
+  version: 1.0.0
+  title: Langame
+  termsOfService: 'https://help.langa.me/terms/'
+  contact:
+    email: contact@langa.me
+    url: 'https://help.langa.me'
+  license:
+    name: Apache 2.0
+    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
+  x-logo:
+    url: 'https://publish-01.obsidian.md/access/6b8b08b83c72d4fc3207cfc424d57da6/favicon.png'
+  description:
+    $ref: './info-description.md'
+tags:
+  - name: Conversation
+    description: Augment your service conversations.
+servers:
+  - url: 'https://api.langa.me/v1'
+paths:
+  /conversation/starter:
+    $ref: paths/conversation-starter.yaml
+components:
+  securitySchemes:
+    api_key:
+      type: apiKey
+      in: header
+      name: X-Api-Key

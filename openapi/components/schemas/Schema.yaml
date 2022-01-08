@@ -1,0 +1,8 @@
+type: object
+title: Scalars
+properties:
+  topics:
+    description: List of topics.
+    type: array
+    items:
+      type: string

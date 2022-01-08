@@ -1,0 +1,57 @@
+post:
+  tags:
+    - Starter
+  summary: Request a conversation starter on any topic(s).
+  description: |
+    This is the entrypoint to request a conversation on any topic(s).
+    You can then use it in your service.
+  operationId: postPathItemWithExamples
+  security:
+    - api_key: []
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/Schema.yaml
+        examples:
+          ice_breaker_travel:
+            summary: Ice Breaker & Travel conversation.
+            description: Ice breaker related to travelling.
+            value:
+              topics:
+                - "ice breaker"
+                - "travel"
+          deep:
+            summary: Deep conversation.
+            description: Big talks opening a deep conversation.
+            value:
+              topics:
+                - "deep talk"
+                - "big talk"
+          scientific:
+            summary: Scientific conversation.
+            description: Scientific talk.
+            value:
+              topics:
+                - "science"
+                - "philosophy"
+                - "physic"
+    description: Customisation of the conversation starter, default is "ice breaker".
+    required: false
+  responses:
+    '200':
+      description: OK
+      headers:
+        X-Rate-Limit:
+          description: calls per hour allowed
+          schema:
+            type: integer
+            format: int32
+        X-Expires-After:
+          $ref: ../components/headers/ExpiresAfter.yaml
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Schema.yaml
+    '400':
+      $ref: ../components/responses/Problem.yaml

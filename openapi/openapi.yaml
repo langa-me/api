@@ -1,54 +1,29 @@
 openapi: 3.1.0
 info:
   version: 1.0.0
-  title: Example.com
-  termsOfService: 'https://example.com/terms/'
+  title: Langame
+  termsOfService: 'https://help.langa.me/terms/'
   contact:
-    email: contact@example.com
-    url: 'http://example.com/contact'
+    email: contact@langa.me
+    url: 'https://help.langa.me'
   license:
     name: Apache 2.0
     url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
   x-logo:
-    url: 'https://redocly.github.io/openapi-template/logo.png'
+    url: 'https://publish-01.obsidian.md/access/6b8b08b83c72d4fc3207cfc424d57da6/favicon.png'
   description:
-    $ref: ./info-description.md
-externalDocs:
-  description: Find out how to create a GitHub repo for your OpenAPI definition.
-  url: 'https://github.com/Rebilly/generator-openapi-repo'
+    $ref: './info-description.md'
 tags:
-  - name: Echo
-    description: Example echo operations.
-  - name: User
-    description: Operations about users.
-  - name: Tag
-    description: This is a tag description.
+  - name: Conversation
+    description: Augment your service conversations.
 servers:
-  - url: 'http://example.com/api/v1'
-  - url: 'https://example.com/api/v1'
+  - url: 'https://api.langa.me/v1'
 paths:
-  '/users/{username}':
-    $ref: 'paths/users@{username}.yaml'
-  /echo:
-    $ref: paths/echo.yaml
-  /pathItem:
-    $ref: paths/path-item.yaml
-  /pathItemWithExamples:
-    $ref: paths/path-item-with-examples.yaml
+  /conversation/starter:
+    $ref: paths/conversation-starter.yaml
 components:
   securitySchemes:
-    main_auth:
-      type: oauth2
-      flows:
-        implicit:
-          authorizationUrl: 'http://example.com/api/oauth/dialog'
-          scopes:
-            'read:users': read users info
-            'write:users': modify or remove users
     api_key:
       type: apiKey
       in: header
-      name: api_key
-    basic_auth:
-      type: http
-      scheme: basic
+      name: X-Api-Key

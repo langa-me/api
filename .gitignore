@@ -1,3 +1,4 @@
 # Dir for bundles
-dist
+dist*
 node_modules
+redoc-static.html

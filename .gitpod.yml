@@ -1,0 +1,20 @@
+tasks:
+    - name: Secrets & configurations
+      command: |
+        docker pull redocly/redoc &
+        eval $(gp env -e)
+        
+image:
+  file: .gitpod.Dockerfile
+
+vscode:
+  extensions:
+    - aaron-bond.better-comments
+    - GitHub.copilot
+    - gitpod.gitpod-desktop
+    - k--kato.intellij-idea-keybindings
+    - ms-azuretools.vscode-docker
+    - mushan.vscode-paste-image
+    - Perkovec.emoji
+    - redhat.vscode-yaml
+    - toba.vsfire

@@ -5,7 +5,7 @@ post:
   description: |
     This is the entrypoint to request a conversation on any topic(s).
     You can then use it in your service.
-  operationId: postPathItemWithExamples
+  operationId: conversationStarter
   security:
     - api_key: []
   requestBody:

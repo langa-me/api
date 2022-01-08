@@ -1,0 +1,11 @@
+type: object
+title: Scalars
+properties:
+  topics:
+    description: List of topics.
+    type: array
+    items:
+      type: string
+  conversation_starter:
+    description: A conversation starter.
+    type: string

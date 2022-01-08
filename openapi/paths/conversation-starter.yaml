@@ -41,17 +41,23 @@ post:
   responses:
     '200':
       description: OK
-      headers:
-        X-Rate-Limit:
-          description: calls per hour allowed
-          schema:
-            type: integer
-            format: int32
-        X-Expires-After:
-          $ref: ../components/headers/ExpiresAfter.yaml
       content:
         application/json:
           schema:
-            $ref: ../components/schemas/Schema.yaml
-    '400':
-      $ref: ../components/responses/Problem.yaml
+            $ref: ../components/schemas/Ok.yaml
+          examples:
+            ice_breaker_travel:
+              summary: Ice Breaker & Travel conversation.
+              description: Ice breaker related to travelling.
+              value: What are examples of the benefits and drawbacks of being a global citizen?
+            deep:
+              summary: Deep conversation.
+              description: Big talks opening a deep conversation.
+              value: What is an unanswered question that you have about your future?
+            scientific:
+              summary: Scientific conversation.
+              description: Scientific talk.
+              value: Do you think humans will ever connect all science to a single theory of everything
+    # TODO
+    # '400':
+      # $ref: ../components/responses/Problem.yaml

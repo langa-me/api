@@ -39,7 +39,7 @@ post:
     description: Customisation of the conversation starter, default is "ice breaker".
     required: false
   responses:
-    '200':
+    "200":
       description: OK
       content:
         application/json:
@@ -49,15 +49,28 @@ post:
             ice_breaker_travel:
               summary: Ice Breaker & Travel conversation.
               description: Ice breaker related to travelling.
-              value: What are examples of the benefits and drawbacks of being a global citizen?
+              value:
+                topics:
+                  - "ice breaker"
+                  - "travel"
+                conversation_starter: What are examples of the benefits and drawbacks of being a global citizen?
             deep:
               summary: Deep conversation.
               description: Big talks opening a deep conversation.
-              value: What is an unanswered question that you have about your future?
+              value:
+                topics:
+                  - "deep talk"
+                  - "big talk"
+                conversation_starter: What is an unanswered question that you have about your future?
             scientific:
               summary: Scientific conversation.
               description: Scientific talk.
-              value: Do you think humans will ever connect all science to a single theory of everything
+              value:
+                topics:
+                  - "science"
+                  - "philosophy"
+                  - "physic"
+                conversation_starter: Do you think humans will ever connect all science to a single theory of everything
     # TODO
     # '400':
-      # $ref: ../components/responses/Problem.yaml
+    # $ref: ../components/responses/Problem.yaml

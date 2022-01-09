@@ -12,7 +12,7 @@ post:
     content:
       application/json:
         schema:
-          $ref: ../components/schemas/Schema.yaml
+          $ref: ../components/schemas/ConversationStarterRequest.yaml
         examples:
           ice_breaker_travel:
             summary: Ice Breaker & Travel conversation.
@@ -21,6 +21,8 @@ post:
               topics:
                 - "ice breaker"
                 - "travel"
+              limit: 2
+              translated: true
           deep:
             summary: Deep conversation.
             description: Big talks opening a deep conversation.
@@ -39,38 +41,15 @@ post:
     description: Customisation of the conversation starter, default is "ice breaker".
     required: false
   responses:
-    "200":
-      description: OK
-      content:
-        application/json:
-          schema:
-            $ref: ../components/schemas/Ok.yaml
-          examples:
-            ice_breaker_travel:
-              summary: Ice Breaker & Travel conversation.
-              description: Ice breaker related to travelling.
-              value:
-                topics:
-                  - "ice breaker"
-                  - "travel"
-                conversation_starter: What are examples of the benefits and drawbacks of being a global citizen?
-            deep:
-              summary: Deep conversation.
-              description: Big talks opening a deep conversation.
-              value:
-                topics:
-                  - "deep talk"
-                  - "big talk"
-                conversation_starter: What is an unanswered question that you have about your future?
-            scientific:
-              summary: Scientific conversation.
-              description: Scientific talk.
-              value:
-                topics:
-                  - "science"
-                  - "philosophy"
-                  - "physic"
-                conversation_starter: Do you think humans will ever connect all science to a single theory of everything
+    200:
+      $ref: '../components/responses/ConversationStarterResponse.yaml'
+
     # TODO
-    # '400':
-    # $ref: ../components/responses/Problem.yaml
+    400:
+      $ref: ../components/responses/Error.yaml
+    401:
+      $ref: ../components/responses/Error.yaml
+    429:
+      $ref: ../components/responses/Error.yaml
+    500:
+      $ref: ../components/responses/Error.yaml

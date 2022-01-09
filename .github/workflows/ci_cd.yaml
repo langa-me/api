@@ -1,10 +1,9 @@
-# Extracted from https://github.com/jizt-it/jizt-api-spec/blob/main/.github/workflows/build-docs.yml
 
 name: Build docs
 on:
   push:
-    branches:
-      - main
+    tags:
+      - "v*.*.*"
 
 jobs:
   build:
@@ -21,3 +20,11 @@ jobs:
         force_orphan: true
         exclude_assets: '.github,openapi,.redocly.yaml,LICENSE,README.md,build_cd.sh,docs,.gitpod*,package*,.gitignore'
         cname: docs.langa.me
+    - name: Generate Changelog
+      run: git log | head > ${{ github.workspace }}-CHANGELOG.txt
+    - name: Release
+      uses: softprops/action-gh-release@v1
+      with:
+        body_path: ${{ github.workspace }}-CHANGELOG.txt
+      env:
+        GITHUB_REPOSITORY: langa-me/api

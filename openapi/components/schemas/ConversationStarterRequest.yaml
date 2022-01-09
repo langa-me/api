@@ -1,0 +1,14 @@
+type: object
+title: ConversationStarterRequest
+properties:
+  topics:
+    description: List of topics the conversation starters should be related to. The conversation starters will be about any of these topics.
+    type: array
+    items:
+      type: string
+  limit:
+    description: Quantity of conversation starters to return.
+    type: integer
+  translated:
+    description: Whether to return translations (increase latency).
+    type: boolean

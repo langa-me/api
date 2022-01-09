@@ -1,8 +1,8 @@
 tasks:
     - name: Secrets & configurations
       command: |
-        docker pull redocly/redoc &
         eval $(gp env -e)
+        npm i
         
 image:
   file: .gitpod.Dockerfile

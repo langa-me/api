@@ -1,0 +1,41 @@
+type: object
+title: ConversationStarterResponse
+properties:
+  topics:
+    description: List of topics.
+    type: array
+    items:
+      type: string
+  limit:
+    description: Quantity of conversation starters to return.
+    type: integer
+  translated:
+    description: Whether to return translations (increase latency).
+    type: boolean
+  results:
+    type: array
+    items:
+      type: object
+      description: List of conversation starters in different languages if translated.
+      properties:
+        en:
+          type: string
+        fr:
+          type: string
+        de:
+          type: string
+        es:
+          type: string
+        it:
+          type: string
+        ja:
+          type: string
+        ko:
+          type: string
+        pt:
+          type: string
+        ru:
+          type: string
+        zh-CN:
+          type: string
+  

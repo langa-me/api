@@ -1,0 +1,63 @@
+description: Conversation starter response successfully.
+content:
+  application/json:
+    schema:
+      $ref: ../schemas/ConversationStarterResponse.yaml
+    examples:
+      ice_breaker_travel:
+        summary: Ice Breaker & Travel conversation.
+        description: Ice breaker related to travelling.
+        value:
+          topics:
+            - "ice breaker"
+            - "travel"
+          limit: 2
+          translated: true
+          results:
+            - conversation_starter:
+                de: Was würde Sie veranlassen, eine dramatische Veränderung in Ihrem Leben vorzunehmen? Ist es das wert?
+                en: What are examples of the benefits and drawbacks of being a global citizen?
+                es: ¿Qué te impulsaría a hacer un cambio dramático en tu vida? ¿Vale la pena?
+                fr: Qu'est-ce qui vous pousserait à faire un changement radical dans votre vie. Est-ce que ça vaut le coup?
+                it: Cosa ti spingerebbe a fare un cambiamento drammatico nella tua vita. Ne vale la pena?
+                ja: あなたの人生に劇的な変化をもたらすためにあなたを促すものは何ですか。その価値はありますか？
+                ko: 당신의 삶에 극적인 변화를 불러일으키는 것은 무엇입니까? 그만한 가치가 있습니까?
+                pt: O que o levaria a fazer uma mudança dramática em sua vida. Vale a pena?
+                ru: Что побудило бы вас кардинально изменить свою жизнь. Стоит ли оно того?
+                zh-CN: 什么会促使你在你的生活中做出巨大的改变。这值得么？
+            - conversation_starter:
+                de: Was hast du auf Reisen gelernt?
+                en: What is something you learned while traveling?
+                es: ¿Qué aprendiste mientras viajabas?
+                fr: Qu'avez-vous appris en voyageant ?
+                it: Qual è qualcosa che hai imparato viaggiando?
+                ja: 旅行中に学んだことは何ですか？
+                ko: 여행을 하면서 배운 것은 무엇인가요?
+                pt: O que você aprendeu durante a viagem?
+                ru: Что вы узнали во время путешествия?
+                zh-CN: 你在旅行中学到了什么？
+      deep:
+        summary: Deep conversation.
+        description: Big talks opening a deep conversation.
+        value:
+          topics:
+            - "deep talk"
+            - "big talk"
+          limit: 1
+          translated: false
+          results:
+            - conversation_starter:
+                en: What is an unanswered question that you have about your future?
+      scientific:
+        summary: Scientific conversation.
+        description: Scientific talk.
+        value:
+          topics:
+            - "science"
+            - "philosophy"
+            - "physic"
+          limit: 1
+          translated: false
+          results:
+            - conversation_starter:
+                en: Do you think humans will ever connect all science to a single theory of everything

@@ -9,7 +9,7 @@ release:
 	git push origin main; \
 	git tag $$VERSION; \
 	git push origin $$VERSION
-	@echo "Done, check https://github.com/langa-me/langame-worker/actions"
+	@echo "Done, check https://github.com/langa-me/api/actions"
 
 .PHONY: help
 

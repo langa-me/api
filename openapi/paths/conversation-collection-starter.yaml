@@ -1,0 +1,80 @@
+post:
+  tags:
+    - Collection starter
+  summary: Add a conversation starter to a collection.
+  operationId: conversationCollectionStarterPost
+  security:
+    - api_key: []
+  parameters:
+    - in: path
+      name: collectionId
+      schema:
+        type: string
+      required: true
+      description: Collection ID to add.
+      examples:
+        basic:
+          value: uTge4ZQ4ZQ4ZQ4ZQ4Zo
+          summary: A sample ID value
+    - in: path
+      name: starterId
+      schema:
+        type: string
+      required: true
+      description: Starter ID to add.
+      examples:
+        basic:
+          value: ffee3Gbefg3Gbefg3Gbe
+          summary: A sample ID value
+  responses:
+    200:
+      $ref: "../components/responses/ConversationCollectionStarterResponse.yaml"
+    # TODO
+    400:
+      $ref: ../components/responses/Error.yaml
+    401:
+      $ref: ../components/responses/Error.yaml
+    429:
+      $ref: ../components/responses/Error.yaml
+    500:
+      $ref: ../components/responses/Error.yaml
+delete:
+  tags:
+    - Collection starter
+  summary: Remove a conversation starter from a collection.
+  operationId: conversationCollectionStarterDelete
+  security:
+    - api_key: []
+  parameters:
+    - in: path
+      name: collectionId
+      schema:
+        type: string
+      required: true
+      description: Collection ID to add.
+      examples:
+        basic:
+          value: uTge4ZQ4ZQ4ZQ4ZQ4Zo
+          summary: A sample ID value
+    - in: path
+      name: starterId
+      schema:
+        type: string
+      required: true
+      description: Starter ID to add.
+      examples:
+        basic:
+          value: ffee3Gbefg3Gbefg3Gbe
+          summary: A sample ID value
+  responses:
+    200:
+      $ref: "../components/responses/ConversationCollectionStarterResponse.yaml"
+    # TODO
+    400:
+      $ref: ../components/responses/Error.yaml
+    401:
+      $ref: ../components/responses/Error.yaml
+    429:
+      $ref: ../components/responses/Error.yaml
+    500:
+      $ref: ../components/responses/Error.yaml

@@ -1,0 +1,17 @@
+type: object
+title: ConversationCollectionResponse
+properties:
+  results:
+      type: array
+      items:
+        type: object
+        properties:
+          topics:
+            description: List of topics.
+            type: array
+            items:
+              type: string
+          id:
+            type: string
+          name:
+            type: string

@@ -1,0 +1,19 @@
+get:
+  tags:
+    - Collection starter
+  summary: List collections.
+  operationId: conversationCollectionStarterList
+  security:
+    - api_key: []
+  responses:
+    200:
+      $ref: "../components/responses/ConversationCollectionResponse.yaml"
+    # TODO
+    400:
+      $ref: ../components/responses/Error.yaml
+    401:
+      $ref: ../components/responses/Error.yaml
+    429:
+      $ref: ../components/responses/Error.yaml
+    500:
+      $ref: ../components/responses/Error.yaml

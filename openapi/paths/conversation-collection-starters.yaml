@@ -1,0 +1,30 @@
+get:
+  tags:
+    - Collection starter
+  summary: Get a collection' conversation starter(s).
+  operationId: conversationCollectionStarterGet
+  security:
+    - api_key: []
+  parameters:
+    - in: path
+      name: collectionId
+      schema:
+        type: string
+      required: true
+      description: Collection ID to get.
+      examples:
+        basic:
+          value: uTge4ZQ4ZQ4ZQ4ZQ4Zo
+          summary: A sample ID value
+  responses:
+    200:
+      $ref: "../components/responses/ConversationCollectionStarterResponse.yaml"
+    # TODO
+    400:
+      $ref: ../components/responses/Error.yaml
+    401:
+      $ref: ../components/responses/Error.yaml
+    429:
+      $ref: ../components/responses/Error.yaml
+    500:
+      $ref: ../components/responses/Error.yaml

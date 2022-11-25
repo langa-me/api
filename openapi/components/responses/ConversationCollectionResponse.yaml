@@ -1,0 +1,29 @@
+description: Conversation collection response successfully.
+content:
+  application/json:
+    schema:
+      $ref: ../schemas/ConversationCollectionResponse.yaml
+    examples:
+      # ice_breaker_travel:
+      #   summary: Ice breaker travel
+      #   value:
+      #     results:
+      #       - topics:
+      #           - travel
+      #         id: uTge4ZQ4ZQ4ZQ4ZQ4Zo
+      #         name: Travel breaker
+      brainy:
+        summary: Brainy
+        value:
+          results:
+            - topics:
+                - science
+                - technology
+                - history
+                - geography
+                - art
+                - literature
+                - philosophy
+                - religion
+              id: uTge4ZQ4ZQ4ZQ4jQ4Zo
+              name: Brainy stuff

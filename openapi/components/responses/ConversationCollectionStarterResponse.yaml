@@ -1,18 +1,13 @@
-description: Conversation starter response successfully.
+description: Conversation collection starter response successfully.
 content:
   application/json:
     schema:
-      $ref: ../schemas/ConversationStarterResponse.yaml
+      $ref: ../schemas/ConversationCollectionStarterResponse.yaml
     examples:
       ice_breaker_travel:
         summary: Ice Breaker & Travel conversation.
         description: Ice breaker related to travelling.
         value:
-          topics:
-            - "ice breaker"
-            - "travel"
-          limit: 2
-          translated: true
           results:
             - conversation_starter:
                 de: Was würde Sie veranlassen, eine dramatische Veränderung in Ihrem Leben vorzunehmen? Ist es das wert?
@@ -26,42 +21,35 @@ content:
                 ru: Что побудило бы вас кардинально изменить свою жизнь. Стоит ли оно того?
                 zh-CN: 什么会促使你在你的生活中做出巨大的改变。这值得么？
               id: ECdi87CAvHoHELwXcUjT
-            - conversation_starter:
-                de: Was hast du auf Reisen gelernt?
-                en: What is something you learned while traveling?
-                es: ¿Qué aprendiste mientras viajabas?
-                fr: Qu'avez-vous appris en voyageant ?
-                it: Qual è qualcosa che hai imparato viaggiando?
-                ja: 旅行中に学んだことは何ですか？
-                ko: 여행을 하면서 배운 것은 무엇인가요?
-                pt: O que você aprendeu durante a viagem?
-                ru: Что вы узнали во время путешествия?
-                zh-CN: 你在旅行中学到了什么？
-              id: Uy4Z7ZQ4ZQ4ZQ4ZQ4ZQ4
+              updated_at: "2021-03-01T12:00:00.000Z"
+              original_id: z2X4ZuQ4ZuQfcUjT
+              topics:
+                - travel
+                - ice breaker
       deep:
         summary: Deep conversation.
         description: Big talks opening a deep conversation.
         value:
-          topics:
-            - "deep talk"
-            - "big talk"
-          limit: 1
-          translated: false
           results:
             - conversation_starter:
                 en: What is an unanswered question that you have about your future?
               id: 4ZQ4ZQ4ZQ4ZQ4ZQ4ZQ4
+              updated_at: "2021-03-01T12:00:00.000Z"
+              original_id: 4ZQ4ZQ4ZQ4ZQ4ZQ4ZQ4
+              topics:
+                - deep talk
+                - big talk
       scientific:
         summary: Scientific conversation.
         description: Scientific talk.
         value:
-          topics:
-            - "science"
-            - "philosophy"
-            - "physic"
-          limit: 1
-          translated: false
           results:
             - conversation_starter:
                 en: Do you think humans will ever connect all science to a single theory of everything
               id: oP4ZQ4ZQ4ZQ4ZQ4ZQ4Z
+              updated_at: "2021-03-01T12:00:00.000Z"
+              original_id: 4ZQ4ZQ4ZQ4ZQ4ZQ4ZQ4
+              topics:
+                - science
+                - philosophy
+                - physic

@@ -1,6 +1,6 @@
 openapi: 3.1.0
 info:
-  version: 1.0.3
+  version: 1.0.5
   title: Langame
   termsOfService: 'https://help.langa.me/terms/'
   contact:
@@ -21,6 +21,14 @@ servers:
 paths:
   /conversation/starter:
     $ref: paths/conversation-starter.yaml
+  /conversation/collection:
+    $ref: paths/conversation-collections.yaml
+  /conversation/collection/{collectionId}:
+    $ref: paths/conversation-collection.yaml
+  /conversation/collection/{collectionId}/starter:
+    $ref: paths/conversation-collection-starters.yaml
+  /conversation/collection/{collectionId}/starter/{starterId}:
+    $ref: paths/conversation-collection-starter.yaml
 components:
   securitySchemes:
     api_key:

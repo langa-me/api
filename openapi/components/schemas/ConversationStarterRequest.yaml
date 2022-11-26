@@ -12,3 +12,8 @@ properties:
   translated:
     description: Whether to return translations (increase latency).
     type: boolean
+  personas:
+    description: A list of personas to be used to generate the conversation starters aligned on. Overwrites the given topics.
+    type: array
+    items:
+      type: string

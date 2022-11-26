@@ -23,6 +23,15 @@ post:
                 - "travel"
               limit: 2
               translated: true
+          biology_computer_science_bios:
+            summary: Using personas to generate conversation starters that are relevant to everyone's interests.
+            description: Personas to conversation starters.
+            value:
+              personas:
+                - "I am a biology student, I like to play basketball on my free time"
+                - "I am a computer science student, I like to play video games on my free time"
+              limit: 2
+              translated: true
           deep:
             summary: Deep conversation.
             description: Big talks opening a deep conversation.

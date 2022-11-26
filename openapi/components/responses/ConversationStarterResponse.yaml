@@ -38,6 +38,40 @@ content:
                 ru: Что вы узнали во время путешествия?
                 zh-CN: 你在旅行中学到了什么？
               id: Uy4Z7ZQ4ZQ4ZQ4ZQ4ZQ4
+      biology_computer_science_bios:
+        summary: Using personas to generate conversation starters that are relevant to everyone's interests.
+        description: Personas to conversation starters.
+        value:
+          personas:
+            - "I am a biology student, I like to play basketball on my free time"
+            - "I am a computer science student, I like to play video games on my free time"
+          limit: 2
+          translated: true
+          results:
+            - conversation_starter:
+                de: Was ist die wichtigste Funktion eines Mems?
+                en: What is the most basic function of a meme?
+                es: ¿Cuál es la función más básica de un meme?
+                fr: Quelle est la fonction la plus basique d'un meme ?
+                it: Qual è la funzione più basilare di un meme?
+                ja: メームの最も基本的な機能は何ですか？
+                ko: 메멕의 가장 기본적인 기능은 무엇입니까?
+                pt: Qual é a função mais básica de um meme?
+                ru: Какая самая простая функция мема?
+                zh-CN: 什么是最基本的功能？
+              id: ECdi87CAvFoHELwXcUjT
+            - conversation_starter:
+                de: Was werden Filme wie " THE MATRIX" und " TRANSCENDENCE" für unsere Realität bedeuten?
+                en: What will movies like " THE MATRIX" and " TRANSCENDENCE " mean for our reality ?
+                es: ¿Qué significarán películas como "THE MATRIX" y "TRANSCENDENCE" para nuestra realidad?
+                fr: Qu'est-ce que des films comme "THE MATRIX" et "TRANSCENDENCE" signifient pour notre réalité ?
+                it: Cosa significheranno film come "THE MATRIX" e "TRANSCENDENCE" per la nostra realtà?
+                ja: 「THE MATRIX」や「TRANSCENDENCE」のような映画は、私たちの現実に何を意味するのでしょうか？
+                # ko: "THE MATRIX"와 "TRANSCENDENCE"와 같은 영화는 우리의 현실에 무슨 의미를 두고 있습니까?
+                pt: O que filmes como "THE MATRIX" e "TRANSCENDENCE" significam para a nossa realidade?
+                ru: Что будут означать фильмы "THE MATRIX" и "TRANSCENDENCE" для нашей реальности?
+                zh-CN: 电影“THE MATRIX”和“TRANSCENDENCE”对我们的现实意味着什么
+              id: Uy4Z7ZQ4ZQ4ZQ4ZQ4ZU4
       deep:
         summary: Deep conversation.
         description: Big talks opening a deep conversation.

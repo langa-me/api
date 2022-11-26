@@ -2,7 +2,7 @@ type: object
 title: ConversationStarterResponse
 properties:
   topics:
-    description: List of topics.
+    description: List of topics given or relating to given personas.
     type: array
     items:
       type: string
@@ -12,6 +12,11 @@ properties:
   translated:
     description: Whether to return translations (increase latency).
     type: boolean
+  personas:
+    description: A list of personas used to generate the conversation starters aligned on.
+    type: array
+    items:
+      type: string
   results:
     type: array
     items:

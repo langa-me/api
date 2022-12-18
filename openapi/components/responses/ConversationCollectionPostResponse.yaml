@@ -1,0 +1,10 @@
+description: Conversation collection response successfully.
+content:
+  application/json:
+    schema:
+      $ref: ../schemas/ConversationCollectionPostResponse.yaml
+    examples:
+      brainy:
+        value:
+          name: brainy
+          id: uTge4ZQ4ZQ4ZQ4ZQ4Zo

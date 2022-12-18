@@ -1,6 +1,6 @@
 {
   "name": "langame-api",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "dependencies": {
     "@redocly/openapi-cli": "1.0.0-beta.94"
   },

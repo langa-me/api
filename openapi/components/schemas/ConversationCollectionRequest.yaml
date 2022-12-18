@@ -1,0 +1,6 @@
+type: object
+title: ConversationCollectionRequest
+properties:
+  name:
+    description: Name of the collection.
+    type: string

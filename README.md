@@ -16,5 +16,5 @@ npm start
 
 ## How to release
 
-1. Bump openapi/openapi.yaml version
+1. Bump openapi/openapi.yaml version and package.json version
 2. `make release`

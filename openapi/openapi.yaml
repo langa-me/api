@@ -1,6 +1,6 @@
 openapi: 3.1.0
 info:
-  version: 1.0.8
+  version: 1.0.9
   title: Langame
   termsOfService: 'https://help.langa.me/terms/'
   contact:

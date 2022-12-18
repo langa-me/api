@@ -28,33 +28,3 @@ get:
       $ref: ../components/responses/Error.yaml
     500:
       $ref: ../components/responses/Error.yaml
-post:
-  tags:
-    - Collection starter
-  summary: Create a collection.
-  operationId: conversationCollectionCreate
-  security:
-    - api_key: []
-  requestBody:
-    content:
-      application/json:
-        schema:
-          $ref: ../components/schemas/ConversationCollectionRequest.yaml
-        examples:
-          basic:
-            summary: A basic collection.
-            value:
-              name: "brainy"
-    required: true
-  responses:
-    200:
-      $ref: "../components/responses/ConversationCollectionPostResponse.yaml"
-    # TODO
-    400:
-      $ref: ../components/responses/Error.yaml
-    401:
-      $ref: ../components/responses/Error.yaml
-    429:
-      $ref: ../components/responses/Error.yaml
-    500:
-      $ref: ../components/responses/Error.yaml
